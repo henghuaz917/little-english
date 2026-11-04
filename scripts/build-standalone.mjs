@@ -1,0 +1,13 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+let html=await readFile(resolve(root,'dist/index.html'),'utf8');
+const script=html.match(/<script[^>]*src="([^"]+)"[^>]*><\/script>/);
+const css=html.match(/<link[^>]*href="([^"]+\.css)"[^>]*>/);
+if(!script||!css)throw new Error('未找到构建的脚本或样式。');
+const js=await readFile(resolve(root,'dist',script[1].replace(/^\//,'')),'utf8');
+const style=await readFile(resolve(root,'dist',css[1].replace(/^\//,'')),'utf8');
+html=html.replace(script[0],()=>`<script type="module">${js.replace(/<\/script/gi,'<\\/script')}</script>`).replace(css[0],()=>`<style>${style}</style>`);
+await writeFile(resolve(root,'拾光英语.html'),html);
+console.log('已生成可直接双击的 拾光英语.html');
