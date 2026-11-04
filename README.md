@@ -2,6 +2,20 @@
 
 给久未使用英语的成人学习者准备的本地学习应用。核心是自然拼读、词句记忆与听说读写情景练习，界面适配电脑与手机尺寸。
 
+## 从 GitHub 获取
+
+公开仓库：https://github.com/henghuaz917/little-english
+
+```sh
+git clone https://github.com/henghuaz917/little-english.git
+cd little-english
+npm ci
+npm run build
+npm start
+```
+
+然后访问 `http://127.0.0.1:4173`。也可以直接下载仓库内的 `拾光英语.html` 使用文件版。源码仓库不包含 `dist/`，首次使用启动脚本前请先执行上述安装与构建步骤。
+
 ## 直接使用
 
 - **推荐**：在 Finder 中双击 `启动拾光英语.command`，自动打开 `http://127.0.0.1:4173`。需要 Node.js 18+，已构建版本无需安装 npm 依赖。保留终端窗口，关闭窗口即停止本地服务。
@@ -50,4 +64,4 @@ npm start
 - [National Literacy Trust：Phonics](https://literacytrust.org.uk/information/what-is-literacy/what-phonics/)：声音与字母对应的基础说明。
 - [The role of variable retrieval in effective learning](https://pubmed.ncbi.nlm.nih.gov/39453748/)：主动回忆、间隔练习的研究参考；不据此承诺特定学习速度。
 
-后续协作记录位于 `docs/ai/`，工作分支为 `ai/codex/english-learning`。未推送、未合并、未发布。
+后续协作记录位于 `docs/ai/`，工作分支为 `ai/codex/english-learning`。源码已公开发布到 GitHub，保留开发分支，未合并其他分支。

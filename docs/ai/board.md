@@ -7,4 +7,6 @@
 | FSRS 复习引擎、持久化、行为测试 | Codex 记忆子代理 | 已完成 |
 | 独立代码审查与最终验证 | Codex 独立审查会话 | 已完成 |
 
-工作分支：ai/codex/english-learning。本地交付；公开发布和推送须由用户确认。
+| 公开发布到 henghuaz917/little-english（用户已确认） | Codex 主会话 | 已完成，公开仓库已创建并推送 |
+
+工作分支：ai/codex/english-learning。用户已确认公开创建与推送；未合并其他分支。
