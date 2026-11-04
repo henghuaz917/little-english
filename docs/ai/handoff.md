@@ -1,3 +1,12 @@
+## 2026-11-04｜Codex｜手机可访问的 HTTPS 网页版已部署
+- 目标：把现有英语应用部署成手机浏览器可打开的网页版。
+- 决定：GitHub Pages + Actions，仅发布 dist，Vite 使用相对资源路径，继续在 ai/codex/english-learning 工作。
+- 约束：进度仍按浏览器保存，不自动跨设备同步；录音需要用户授权；不上传个人学习记录。
+- 失败/放弃的尝试：GitHub API 与首次HTTP探测偶发EOF/TLS超时，重试正常；没有修改权限或关闭安全校验。
+- 结果：本地构建及8项测试通过。GitHub Actions 41844409144 的build与deploy均成功，部署版本9a11737；正式HTTPS页面在浏览器显示完整首页，脚本和样式正常加载。截图位于artifacts/live-home.jpg（未上传）。
+- 位置：https://henghuaz917.github.io/little-english/ / .github/workflows/pages.yml / https://github.com/henghuaz917/little-english/actions/runs/41844409144。
+- 下一步：用户在手机Safari或Chrome打开正式链接并体验；可通过设置中的备份迁移原本地进度。
+
 ## 2026-11-04｜Codex｜已公开发布 GitHub 源码仓库
 - 目标：公开发布 henghuaz917/little-english。
 - 决定：按用户确认创建公开仓库，推送 ai/codex/english-learning，保留初始提交历史；不合并其他分支。
