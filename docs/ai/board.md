@@ -10,3 +10,5 @@
 | 公开发布到 henghuaz917/little-english（用户已确认） | Codex 主会话 | 已完成，公开仓库已创建并推送 |
 
 工作分支：ai/codex/english-learning。用户已确认公开创建与推送；未合并其他分支。
+
+| 手机可访问的 HTTPS 网页部署（GitHub Pages） | Codex 主会话 | 已认领，进行中 |
